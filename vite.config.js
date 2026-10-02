@@ -4,6 +4,6 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig(({command})=>({
   plugins: [react()],
-  base: command === 'build' ? '/fe6-react/' : '/',
+  base: command === 'build' ? '/travel-app/' : '/',
 }))
 
