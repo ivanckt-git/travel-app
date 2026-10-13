@@ -1,4 +1,5 @@
 import siteLogo from '../../images/site_logo_transparent.png';
+import hbar from '../../images/h_bar.jpeg';
 import { Link, NavLink } from 'react-router';
 
 const FooterSection = ({}) => {
@@ -7,7 +8,7 @@ const FooterSection = ({}) => {
             <section className="footer_section">
                 <div className='mask_layer'/>
                 <div className='hbar_container'>
-                <img className="hbar" src='./images/h_bar.jpeg'/>
+                <img className="hbar" src={hbar}/>
                 <p>Supported Systems</p>
                 </div>
                 <div className='platforms_container'>
