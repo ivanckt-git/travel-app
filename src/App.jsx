@@ -28,8 +28,9 @@ function App() {
             <SocialLinks groupClass="nav-icons" listItemClass={"nav-icon"}/></div>
         </nav>
         
-        <Routes basename="/travel-app/">
+        <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/travel-app/" element={<Home />} />
           <Route path="/citya" element={<CityPageA />} />
           <Route path="/cityb" element={<CityPageB />} />
           <Route path="/cityc" element={<CityPageC />} />

@@ -16,7 +16,7 @@ import './style.css'
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
-  <BrowserRouter basename="/travel-app/">
+  <BrowserRouter>
     <App />
   </BrowserRouter>,
 );
