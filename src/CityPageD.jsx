@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import { useEffect } from 'react';
-import { cityData } from '../data.js';
-import { Link, NavLink } from 'react-router';
-import HomeGrid from './components/HomeGrid.jsx';
 
+import { useEffect } from 'react';
 import {onPageDInit} from './scripts/PageFunctions.jsx';
-import siteLogo from '../images/site_logo_transparent.png';
 import FooterSection from './components/FooterSection.jsx';
+import city_d_tran from '../images/city_d_tran.png';
+import spot_d_1 from '../images/spot_d_1.jpg';
+import spot_d_2 from '../images/spot_d_2.jpg';
+import spot_d_3 from '../images/spot_d_3.jpg';
 
 function CityPageD() {
 
@@ -34,7 +33,7 @@ function CityPageD() {
           </div>
           <div className="image_container">
             <div className="image">
-              <img src='../images/city_d_tran.png'/>
+              <img src={city_d_tran}/>
             </div>
           </div>
         </div>
@@ -56,7 +55,7 @@ function CityPageD() {
             <h1>City Landmarks</h1>
             <div className="cards_container">
               <div className="card card1">
-                <img src="../images/spot_d_1.jpg" alt="" />
+                <img src={spot_d_1} alt="" />
                 <article>
                   <h1>Planetology Observatory</h1>
                   <p>On the mountain peak, where Bugenhagen summons holographic projections of the Planet.</p>
@@ -64,7 +63,7 @@ function CityPageD() {
               </div>
 
               <div className="card card1">
-                <img src="../images/spot_d_2.jpg" alt="" />
+                <img src={spot_d_2} alt="" />
                 <article>
                   <h1>Wind Chime Corridor</h1>
                   <p>Hung with dreamcatchers and life tapestries that make ethereal sounds when the wind blows</p>
@@ -72,7 +71,7 @@ function CityPageD() {
               </div>
 
               <div className="card card1">
-                <img src="../images/spot_d_3.jpg" alt="" />
+                <img src={spot_d_3} alt="" />
                 <article>
                   <h1>Lifestream Spring</h1>
                   <p>A faintly glowing spring at the bottom of the canyon. Legend says one sip lets you hear the Planet whisper.</p>

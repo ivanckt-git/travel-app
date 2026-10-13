@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import { useEffect } from 'react';
-import { cityData } from '../data.js';
-import { Link, NavLink } from 'react-router';
-import HomeGrid from './components/HomeGrid.jsx';
 
+import { useEffect } from 'react';
 import {onPageCInit} from './scripts/PageFunctions.jsx';
-import siteLogo from '../images/site_logo_transparent.png';
 import FooterSection from './components/FooterSection.jsx';
+import city_c_tran from '../images/city_c_tran.png';
+import spot_c_1 from '../images/spot_c_1.jpg';
+import spot_c_2 from '../images/spot_c_2.jpg';
+import spot_c_3 from '../images/spot_c_3.jpg';
 
 function CityPageC() {
 
@@ -34,7 +33,7 @@ function CityPageC() {
           </div>
           <div className="image_container">
             <div className="image">
-              <img src='../images/city_c_tran.png'/>
+              <img src={city_c_tran}/>
             </div>
           </div>
         </div>
@@ -56,7 +55,7 @@ function CityPageC() {
             <h1>City Landmarks</h1>
             <div className="cards_container">
               <div className="card card1">
-                <img src="../images/spot_c_1.jpg" alt="" />
+                <img src={spot_c_1} alt="" />
                 <article>
                   <h1>Philosophy Hut</h1>
                   <p>Center of the village, with a wooden sign that says "We Build. We Think. We Are Free."</p>
@@ -64,7 +63,7 @@ function CityPageC() {
               </div>
 
               <div className="card card1">
-                <img src="../images/spot_c_2.jpg" alt="" />
+                <img src={spot_c_2} alt="" />
                 <article>
                   <h1>Cemetery</h1>
                   <p>For every villager who passes, they erect a tombstone that says "Stopped."</p>
@@ -72,7 +71,7 @@ function CityPageC() {
               </div>
 
               <div className="card card1">
-                <img src="../images/spot_c_3.jpg" alt="" />
+                <img src={spot_c_3} alt="" />
                 <article>
                   <h1>Chocobo Grass Hut</h1>
                   <p>The elder's house, hiding diaries about artificial life</p>

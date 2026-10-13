@@ -94,6 +94,10 @@ main{
     background-color: var(--clr-secondary-9);
     margin: auto;
     overflow: hidden;
+    transition: background-color 1s ease;
+}
+main.active{
+    background-color: black;
 }
 
 nav{
@@ -846,17 +850,18 @@ nav.active{
     }
     
     .info_section{
-        margin-top: var(--nav_height);
-        
-        .info_container{
+        margin: var(--nav_height);
+        /* .info_container{
             position: relative;
             width:100%;
             aspect-ratio: 1408/768;
             .content{
+                transition: filter 0.5s ease;
+                filter: drop-shadow(0 0 0 transparent);
                 position: absolute;
                 margin-left: 10%;
-                width: 40%;
-                bottom:20%;
+                bottom: 200px;
+                width: 400px;
                 background: rgba(20,20,20,0.7);
                 padding: 2rem;
                 z-index: 2;
@@ -864,7 +869,6 @@ nav.active{
                     font-size: 1.5rem;
                     margin-bottom: 1rem;
                     color: var(--clr-secondary-2);
-                    /* text-shadow: 4px 4px 8px var(--clr-gray-6); */
                     text-shadow: 0 0 10px var(--clr-gray-6) ,0 0 20px var(--clr-gray-6);
                 }
                 p{
@@ -876,6 +880,43 @@ nav.active{
             .image_container{
                 position: absolute;
                 left:45%;
+                height: 600px;
+            }
+            
+        } */
+        .info_container{
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-items: center;
+            width:100%;
+            height:500px;
+            
+            .content{
+                grid-area: 1 / 1; 
+                transition: filter 0.5s ease;
+                filter: drop-shadow(0 0 0 transparent);
+                width: 400px;
+                transform: translateX(-150px);
+                background: rgba(20,20,20,0.7);
+                padding: 2rem;
+                z-index: 2;
+                h1{
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    color: var(--clr-secondary-2);
+                    text-shadow: 0 0 10px var(--clr-gray-6) ,0 0 20px var(--clr-gray-6);
+                }
+                p{
+                    font-size: 1rem;
+                    color: var(--clr-secondary-2);
+                    text-shadow: 0 0 10px var(--clr-gray-6) ,0 0 20px var(--clr-gray-6);
+                }
+            }
+            .image_container{
+                grid-area: 1 / 1;
+                height: 400px;
+                transform: translateX(150px);
             }
             
         }
@@ -883,6 +924,7 @@ nav.active{
             .info_container{
                 .content{
                     width: 80%;
+                    transform: translateX(0);
                     h1{
                         font-size: 1.5rem;
                     }
@@ -978,12 +1020,10 @@ nav.active{
                     }
 
                     .card.focus{
-                        position: fixed;
-                        width:90%;
+                        width: 90%;
+                        max-height: 100vh;
                         z-index: 100;
-                        top:5%;
-                        bottom: 5%;
-                        left: 5%;
+                        margin: auto;
                         transition: none !important;
                         img{
                             height: auto;
@@ -1023,16 +1063,14 @@ nav.active{
                 }
                 .cards_container.active{
                     grid-template-columns: 1fr;
-                    &::before{
-                        content: '';
-                        position: fixed;
-                        left:0;
-                        right: 0;
-                        top:0;
-                        bottom: 0;
-                        background-color: black;
-                        z-index: 10;
-                    }
+                    position: fixed;
+                    left:0;
+                    right: 0;
+                    top:0;
+                    bottom: 0;
+                    background-color: black;
+                    z-index: 10;
+                    margin: 0;
                 }
 
             }
@@ -1045,19 +1083,23 @@ nav.active{
 
 @keyframes cityFloat {
 	from {
-		transform: translateY(0);
+		transform: translate(150px, 0);
 	}
     50% {
-		transform: translateY(20px);
+		transform: translate(150px,20px);
 	}
     to {
-		transform: translateY(0);
+		transform: translate(150px,0);
 	}
 }
 
 .page.page_a_container{
     .info_section{
         .info_container{
+
+            .content.active{
+                filter: drop-shadow(0 0 8px var(--clr-primary-5));
+            }
             .image_container{   
                 animation: cityFloat 5s infinite ease-in-out;
                 aspect-ratio: 396/463;

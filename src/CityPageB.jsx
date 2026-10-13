@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import { useEffect } from 'react';
-import { cityData } from '../data.js';
-import { Link, NavLink } from 'react-router';
-import HomeGrid from './components/HomeGrid.jsx';
 
+import { useEffect } from 'react';
 import {onPageBInit} from './scripts/PageFunctions.jsx';
-import siteLogo from '../images/site_logo_transparent.png';
 import FooterSection from './components/FooterSection.jsx';
+import city_b_tran from '../images/city_b_tran.png';
+import spot_b_1 from '../images/spot_b_1.jpg';
+import spot_b_2 from '../images/spot_b_2.jpg';
+import spot_b_3 from '../images/spot_b_3.jpg';
 
 function CityPageB() {
 
@@ -34,7 +33,7 @@ function CityPageB() {
           </div>
           <div className="image_container">
             <div className="image">
-              <img src='../images/city_b_tran.png'/>
+              <img src={city_b_tran}/>
             </div>
           </div>
         </div>
@@ -56,7 +55,7 @@ function CityPageB() {
             <h1>City Landmarks</h1>
             <div className="cards_container">
               <div className="card card1">
-                <img src="../images/spot_b_1.jpg" alt="" />
+                <img src={spot_b_1} alt="" />
                 <article>
                   <h1>Airship Dock</h1>
                   <p>Watch SKYHUNTER REGALIA and RUNELIFT CARGO CO. take off and land — the buzzing sound is oddly healing</p>
@@ -64,7 +63,7 @@ function CityPageB() {
               </div>
 
               <div className="card card1">
-                <img src="../images/spot_b_2.jpg" alt="" />
+                <img src={spot_b_2} alt="" />
                 <article>
                   <h1>Lindblum Castle</h1>
                   <p>Walls engraved with glowing runes that light up at night</p>
@@ -72,7 +71,7 @@ function CityPageB() {
               </div>
 
               <div className="card card1">
-                <img src="../images/spot_b_3.jpg" alt="" />
+                <img src={spot_b_3} alt="" />
                 <article>
                   <h1>Festival Plaza</h1>
                   <p>A giant stag statue in the center, with BBQ and mulled wine stalls during the festival</p>

@@ -128,14 +128,21 @@ export function onHomeInit () {
 
 export function onPageAInit(){
     window.scrollTo(0, 0);
+    const main = document.querySelector("main");
+    const textContent = document.querySelector(".page.page_a_container .content");
     function onWindowScroll() {
         let y = window.scrollY;
         let image2 = document.querySelector(".page.page_a_container .image2");
-        if(y>500 && !image2.classList.contains("active")){
+        
+        if((y>500 && y<=800) && !image2.classList.contains("active")){
             image2.classList.add('active');
-        }else if(y <=500 && image2.classList.contains("active")){
+            textContent.classList.add('active');
+            main.classList.add('active');
+        } else if((y <=500 || y > 800) && image2.classList.contains("active")){
             image2.classList.remove('active');
-        }
+            main.classList.remove('active');
+            textContent.classList.remove('active');
+        } 
 
     }
     window.addEventListener('scroll',onWindowScroll,false);
@@ -143,6 +150,8 @@ export function onPageAInit(){
 
     // Clean up and remove the listener when the component unmounts
     return () => {
+        main.classList.remove('active');
+        textContent.classList.remove('active');
         cleanup();
         window.removeEventListener('scroll', onWindowScroll);
     };
