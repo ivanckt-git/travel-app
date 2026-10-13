@@ -16,7 +16,7 @@ import './style.css'
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
-  <BrowserRouter basename={import.meta.env.BASE_URL}>
+  <BrowserRouter>
     <App />
   </BrowserRouter>,
 );
