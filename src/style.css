@@ -236,7 +236,7 @@ nav.active{
 
 @keyframes zoomBackground {
 	from {
-        background-position-x: 18%;
+        background-position-x: 15%;
         background-position-y: 55%;
         background-size: 10%;
         filter: brightness(200%);
