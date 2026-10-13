@@ -28,7 +28,7 @@ function App() {
             <SocialLinks groupClass="nav-icons" listItemClass={"nav-icon"}/></div>
         </nav>
         
-        <Routes basename={import.meta.env.BASE_URL}>
+        <Routes basename="/travel-app/">
           <Route path="/" element={<Home />} />
           <Route path="/citya" element={<CityPageA />} />
           <Route path="/cityb" element={<CityPageB />} />
