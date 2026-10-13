@@ -4,6 +4,6 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig(({command})=>({
   plugins: [react()],
-  base: process.env.NETLIFY ? '/' : (command === 'build' ? './travel-app/' : '/'),
+  base: process.env.NETLIFY ? '/' : (command === 'build' ? '/travel-app/' : '/'),
 }))
 
