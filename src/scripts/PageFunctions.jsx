@@ -143,6 +143,7 @@ export function onPageAInit(){
 
     // Clean up and remove the listener when the component unmounts
     return () => {
+        cleanup();
         window.removeEventListener('scroll', onWindowScroll);
     };
 }

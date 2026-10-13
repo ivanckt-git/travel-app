@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { useEffect } from 'react';
-import { cityData } from '../data.js';
-import { Link, NavLink } from 'react-router';
-import HomeGrid from './components/HomeGrid.jsx';
 
+import { useEffect } from 'react';
 import {onPageAInit} from './scripts/PageFunctions.jsx';
-import siteLogo from '../images/site_logo_transparent.png';
 import FooterSection from './components/FooterSection.jsx';
+import city_a_tran from '../images/city_a_tran.png';
+import city_a_tran_night from '../images/city_a_tran_night.png';
+import spot_a_1 from '../images/spot_a_1.jpg';
+import spot_a_2 from '../images/spot_a_2.jpg';
+import spot_a_3 from '../images/spot_a_3.jpg';
 
 function CityPageA() {
 
@@ -34,10 +34,10 @@ function CityPageA() {
           </div>
           <div className="image_container">
             <div className="image1">
-              <img src='../images/city_a_tran.png'/>
+              <img src={city_a_tran}/>
             </div>
             <div className="image2">
-              <img src='../images/city_a_tran_night.png'/>
+              <img src={city_a_tran_night}/>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ function CityPageA() {
             <h1>City Landmarks</h1>
             <div className="cards_container">
               <div className="card card1">
-                <img src="../images/spot_a_1.jpg" alt="" />
+                <img src={spot_a_1} alt="" />
                 <article>
                   <h1>Mako Reactor</h1>
                   <p>Watch the green Lifestream being sucked up close — shocking and a little heartbreaking</p>
@@ -67,7 +67,7 @@ function CityPageA() {
               </div>
 
               <div className="card card1">
-                <img src="../images/spot_a_2.jpg" alt="" />
+                <img src={spot_a_2} alt="" />
                 <article>
                   <h1>Seventh Heaven</h1>
                   <p>The bar at the bottom of the world. Under the shadow of the plate, this is the only place in the slums with warm light, cheap food, and loud rumors</p>
@@ -75,7 +75,7 @@ function CityPageA() {
               </div>
 
               <div className="card card1">
-                <img src="../images/spot_a_3.jpg" alt="" />
+                <img src={spot_a_3} alt="" />
                 <article>
                   <h1>Shinra Tower</h1>
                   <p>70 floors, with a museum on the top floor overlooking the entire plate at night.</p>
