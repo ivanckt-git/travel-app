@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router';
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import Home from './Home';
-import About from './About';
 import CityPageA from './CityPageA';
 import CityPageB from './CityPageB';
 import CityPageC from './CityPageC';
