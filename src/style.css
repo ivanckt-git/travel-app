@@ -52,6 +52,8 @@
     --nav_height: 6rem;
     --content-max: 1000px;
     --grid-img-width: 600px;
+    --dynamic-bg: url("../images/citya_wide_c.jpeg");
+    --dynamic-ratio: 1408/768;
 }
 
 /* reset */
@@ -809,11 +811,11 @@ nav.active{
             justify-content: center;
             animation: showPageHeader 1s ease-in-out;
             animation-fill-mode: forwards;
-            width:100%;
-            background-image: url('../images/citya_wide_c.jpeg');
+            width:100vw;
+            background-image: var(--dynamic-bg);
             background-repeat: no-repeat;
             background-size: contain;
-            aspect-ratio: 1408/768;
+            aspect-ratio: var(--dynamic-ratio);
             .title{
                 margin-left: 3rem;
                 margin-right: auto;
@@ -889,10 +891,12 @@ nav.active{
             grid-template-columns: 1fr;
             align-items: center;
             justify-items: center;
+            justify-content: center;
             width:100%;
             height:500px;
             
             .content{
+                border-radius: 8px;
                 grid-area: 1 / 1; 
                 transition: filter 0.5s ease;
                 filter: drop-shadow(0 0 0 transparent);
@@ -923,7 +927,7 @@ nav.active{
         @media (width<650px) {
             .info_container{
                 .content{
-                    width: 80%;
+                    width: 100%;
                     transform: translateX(0);
                     h1{
                         font-size: 1.5rem;

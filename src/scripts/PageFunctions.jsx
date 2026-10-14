@@ -267,3 +267,16 @@ function initCards(){
         });
     };
 }
+
+export function DynamicImage({ imageName }) {
+    return (
+    <img 
+        src={`${import.meta.env.BASE_URL}images/${imageName}`} 
+        alt={imageName} 
+    />
+    );
+}
+
+export function DynamicImageUrl({ imageName }) {
+    return `url(${import.meta.env.BASE_URL}images/${imageName})` ;
+}

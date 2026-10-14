@@ -6,34 +6,22 @@ import CityPageA from './CityPageA';
 import CityPageB from './CityPageB';
 import CityPageC from './CityPageC';
 import CityPageD from './CityPageD';
+import CityPageTemplate from './CityPageTemplate'
+import Navbar from './components/Navbar';
 
-import PageLinks from './components/PageLinks';
-import SocialLinks from './components/SocialLinks';
-import siteLogo from '../images/site_logo_transparent.png';
 
 function App() {
   return (
     <>
       <main>
-        <nav>
-          <div>
-            <a href='/#city'>
-              {/* <i className="fa-brands fa-fort-awesome"></i> */}
-              <img src={siteLogo} className="site_logo" alt="" />
-            </a>
-          </div>
-          <div><PageLinks groupClass="main-menu-list"></PageLinks></div>
-          <div>
-            <SocialLinks groupClass="nav-icons" listItemClass={"nav-icon"}/></div>
-        </nav>
-        
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/travel-app/" element={<Home />} />
-          <Route path="/citya" element={<CityPageA />} />
-          <Route path="/cityb" element={<CityPageB />} />
-          <Route path="/cityc" element={<CityPageC />} />
-          <Route path="/cityd" element={<CityPageD />} />
+          <Route path="/citya" element={<CityPageTemplate key="1" groupClass="page page_a_container" city_id="1"/>} />
+          <Route path="/cityb" element={<CityPageTemplate key="2" groupClass="page page_b_container" city_id="2"/>} />
+          <Route path="/cityc" element={<CityPageTemplate key="3" groupClass="page page_c_container" city_id="3"/>} />
+          <Route path="/cityd" element={<CityPageTemplate key="4" groupClass="page page_d_container" city_id="4"/>} />
         </Routes>
       </main>
     </>
