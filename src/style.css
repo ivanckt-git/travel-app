@@ -826,7 +826,7 @@ nav.active {
             justify-content: center;
             animation: showPageHeader 1s ease-in-out;
             animation-fill-mode: forwards;
-            width: 100vw;
+            width: 100%;
             background-image: var(--dynamic-bg);
             background-repeat: no-repeat;
             background-size: contain;
